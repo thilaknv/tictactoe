@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="board">
+        <div class="box" id="b00"></div>
+        <div class="box" id="b01"></div>
+        <div class="box" id="b02"></div>
+        <div class="box" id="b10"></div>
+        <div class="box" id="b11"></div>
+        <div class="box" id="b12"></div>
+        <div class="box" id="b20"></div>
+        <div class="box" id="b21"></div>
+        <div class="box" id="b22"></div>
+    </div>
+    <div class="stats">
+        <span id="P1" class="turn">Player-X</span>
+        <span id="P2">Player-O</span>
+    </div>
+    <div style="height:40px;background-color: none;">
+        <button onclick="location.reload()" class="reload hide">
+            <img src="./images/replay.png" alt="replay" height="30px">
+        </button>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
