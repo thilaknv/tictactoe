@@ -83,15 +83,12 @@ body {
 }
 .c1{
     left: calc(100% / 6);
-    box-shadow: -6px 6px 10px;
 }
 .c2{
     left: 50%;
-    box-shadow: -6px 6px 10px;
 }
 .c3{
     left: calc(5 * 100% / 6);
-    box-shadow: -6px 6px 10px;
 }
 .r1{
     top: calc(100% / 6);
