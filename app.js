@@ -33,7 +33,7 @@ board.addEventListener('click', function x(event) {
 });
 
 function check(type, id) {
-    
+
     const i = Number(id[1]);
     const j = Number(id[2]);
 
@@ -42,13 +42,13 @@ function check(type, id) {
 
     let arr = state.arr;
 
-    if (arr[i][0] == type && arr[i][1] == type && arr[i][2] == type)
+    if (arr[i][0] == type && arr[i][1] == type && arr[i][2] == type && displayBar('r' + (i + 1)))
         return true;
-    if (arr[0][j] == type && arr[1][j] == type && arr[2][j] == type)
+    if (arr[0][j] == type && arr[1][j] == type && arr[2][j] == type && displayBar('c' + (j + 1)))
         return true;
-    if (i == j && arr[0][0] == type && arr[1][1] == type && arr[2][2] == type)
+    if (i == j && arr[0][0] == type && arr[1][1] == type && arr[2][2] == type && displayBar('x1'))
         return true;
-    if (i + j == 2 && arr[0][2] == type && arr[1][1] == type && arr[2][0] == type)
+    if (i + j == 2 && arr[0][2] == type && arr[1][1] == type && arr[2][0] == type && displayBar('x2'))
         return true;
 
     return false;
@@ -69,9 +69,15 @@ function endGame(winner) {
 
 }
 
-
-
-
-
-
-
+function displayBar(classs) {
+    const bar = document.querySelector('.bar');
+    bar.classList.add(classs);
+    bar.classList.remove('hide');
+    let height = 1;
+    const interval = setInterval(() => {
+        bar.style.height = height + '%';
+        height++;
+        if (height >= 100) clearInterval(interval);
+    }, 5);
+    return true;
+}
